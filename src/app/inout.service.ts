@@ -11,7 +11,7 @@ export class InoutService {
     private inOutUrl: string;
 
     constructor(private http: HttpClient) {
-      this.inOutUrl = 'http://localhost:8080/inout';
+      this.inOutUrl = 'https://core-backend-v1.herokuapp.com/inout';
     }
 
     public findAll(): Observable<Inout[]> {
