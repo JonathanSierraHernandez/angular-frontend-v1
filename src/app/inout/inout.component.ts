@@ -26,7 +26,7 @@ export class InoutComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private inOutService: InoutService
-  ) { }
+  ) { this.getInOuts; }
 
   getInOuts(): void {
     this.inOutService.findAll().subscribe(data => {

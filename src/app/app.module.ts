@@ -40,6 +40,7 @@ import {
 import { InoutDetailComponent } from './inout-detail/inout-detail.component';
 import { InoutUpdateComponent } from './inout-update/inout-update.component';
 import { InoutDeleteComponent } from './inout-delete/inout-delete.component';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { InoutDeleteComponent } from './inout-delete/inout-delete.component';
     InoutDetailComponent,
     InoutUpdateComponent,
     InoutDeleteComponent,
+    IndexComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,17 @@
+.content {
+
+    min-height: 200px;
+    border-radius: 10px;
+    margin-top: 16px;
+    margin-left: 32px;
+    margin-right: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+   text-align:center;
+}
+.md-body-2{
+  text-align:center;
+}

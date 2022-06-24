@@ -8,10 +8,11 @@ import { InoutComponent } from './inout/inout.component';
 import { InoutAddComponent } from './inout-add/inout-add.component';
 import { InoutDetailComponent } from './inout-detail/inout-detail.component';
 import { InoutUpdateComponent } from './inout-update/inout-update.component';
+import { IndexComponent } from './index/index.component';
 
 
 const routes: Routes = [
-  //{ path: 'users', component: UsersComponent },
+  { path: '', component: IndexComponent },
   { path: 'users/list', component: UsersListComponent },
   { path: 'adduser', component: UserFormComponent },
   { path: 'user/update', component: UserUpdateComponent, pathMatch: 'full' },

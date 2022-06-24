@@ -29,8 +29,8 @@ export class UsersListComponent implements OnInit, AfterViewInit {
     private route: ActivatedRoute,
     private router: Router,
     private userService: UserService,
-    public dialog: MatDialog
-  ) { }
+    public dialog: MatDialog,
+  ) { this.getUsers(); }
 
   public doFilter = (event: Event) => {
       this.dataSource.filter = (event.target as HTMLInputElement).value.trim().toLocaleLowerCase();
@@ -39,6 +39,7 @@ export class UsersListComponent implements OnInit, AfterViewInit {
   getUsers(): void {
     this.userService.findAll().subscribe(data => {
       this.users = data;
+      console.log(this.users);
       this.dataSource = new MatTableDataSource<User>(data);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.empTbSort;
