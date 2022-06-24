@@ -39,7 +39,6 @@ export class UsersListComponent implements OnInit, AfterViewInit {
   getUsers(): void {
     this.userService.findAll().subscribe(data => {
       this.users = data;
-      console.log(this.users);
       this.dataSource = new MatTableDataSource<User>(data);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.empTbSort;

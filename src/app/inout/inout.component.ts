@@ -26,12 +26,14 @@ export class InoutComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private inOutService: InoutService
-  ) { this.getInOuts; }
+  ) {
+    this.getInOuts;
+  }
 
   getInOuts(): void {
     this.inOutService.findAll().subscribe(data => {
       this.inOuts = data;
-      this.dataSource = new MatTableDataSource<Inout>(this.inOuts);
+      this.dataSource = new MatTableDataSource<Inout>(data);
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
     });

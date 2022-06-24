@@ -12,6 +12,7 @@ export class UserService {
 
     constructor(private http: HttpClient) {
       this.usersUrl = 'https://core-backend-v1.herokuapp.com/users';
+      //this.usersUrl = 'http://localhost:8080/users';
     }
 
     public findAll(): Observable<User[]> {
