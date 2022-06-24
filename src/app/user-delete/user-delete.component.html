@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Apagar arquivo</h1>
+<div mat-dialog-content>
+  Tem certeza que vai apagar {{data.user.name}}?
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close (click)="clickNo()">Nao</button>
+  <button mat-button mat-dialog-close cdkFocusInitial (click)="clickOk()">Sim</button>
+</div>

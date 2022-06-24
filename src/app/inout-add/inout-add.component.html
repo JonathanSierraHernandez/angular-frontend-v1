@@ -1,0 +1,38 @@
+<mat-card class="content mat-elevation-z8">
+  <form [formGroup]="inoutForm" (submit)="submit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" required>
+      <mat-hint>Insira o email da pessoa que vai entrar</mat-hint>
+    </mat-form-field>
+
+    <br>
+    <br>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Entrada</mat-label>
+      <input matInput [ngxMatDatetimePicker]="picker1" placeholder="Escolha o dia e hora de entrada" formControlName="enter" required>
+      <mat-datepicker-toggle matSuffix [for]="$any(picker1)"></mat-datepicker-toggle>
+      <ngx-mat-datetime-picker #picker1></ngx-mat-datetime-picker>
+      <mat-hint>Insira a hora que a pessoa vai entrar</mat-hint>
+    </mat-form-field>
+
+    <br>
+    <br>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Saida</mat-label>
+      <input matInput [ngxMatDatetimePicker]="picker" placeholder="Escolha o dia e hora de saida" formControlName="out" required>
+      <mat-datepicker-toggle matSuffix [for]="$any(picker)"></mat-datepicker-toggle>
+      <ngx-mat-datetime-picker #picker></ngx-mat-datetime-picker>
+      <mat-hint>Insira a hora que a pessoa vai sair</mat-hint>
+    </mat-form-field>
+
+    <br>
+    <br>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!inoutForm.valid" class="button">Criar</button>
+    <button mat-raised-button color="warn" class="button" [routerLink]="['/inout']">Cancelar</button>
+  </form>
+</mat-card>

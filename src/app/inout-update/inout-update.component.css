@@ -1,0 +1,22 @@
+.content {
+
+    min-height: 200px;
+    border-radius: 10px;
+    margin-top: 16px;
+    margin-left: 32px;
+    margin-right: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+  margin-right: 8px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+.input {
+  margin: 32px;
+}

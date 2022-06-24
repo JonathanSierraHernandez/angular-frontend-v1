@@ -1,0 +1,25 @@
+<!--
+<mat-toolbar-row>
+  <button mat-icon-button>
+      <mat-icon (click)="sidebarmenu.toggle()">menu</mat-icon>
+  </button>
+  <h2>Gestao</h2>
+</mat-toolbar-row>
+-->
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened class="mat-elevation-z2" color="primary">
+    <button mat-button class="menu-button" (click)="showAdd()"><mat-icon>add</mat-icon><span>Adicionar</span></button>
+    <button mat-button class="menu-button" (click)="showModify()"><mat-icon>update</mat-icon><span>Modificar</span></button>
+    <button mat-button class="menu-button" (click)="showList()"><mat-icon>list</mat-icon><span>Listar</span></button>
+    <button mat-button class="menu-button" (click)="showDelete()"><mat-icon>delete</mat-icon><span>Apagar</span></button>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <div class="content mat-elevation-z8">
+        <app-user-form *ngIf="add"></app-user-form>
+        <app-users-list *ngIf="list"></app-users-list>
+      </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,65 @@
+<mat-card class="content mat-elevation-z8">
+
+  <div class="all"><img [src]="inoutImage" background="white" /></div>
+  <div>
+    <span class="display-4 all">{{inout.usr.name}} {{inout.usr.surname}}</span>
+    <mat-divider></mat-divider>
+  </div>
+
+  <div class="all">
+    <table>
+      <tr>
+        <th></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Numero identificador do registro</th>
+        <td>{{inout.id}}</td>
+      </tr>
+      <tr>
+        <th>Data da entrada</th>
+        <td>{{inout.enter}}</td>
+      </tr>
+      <tr>
+        <th>Data de saida</th>
+        <td>{{inout.out}}</td>
+      </tr>
+      <tr>
+        <th>Nome</th>
+        <td>{{inout.usr.name}}</td>
+      </tr>
+      <tr>
+        <th>Sobrenome</th>
+        <td>{{inout.usr.surname}}</td>
+      </tr>
+      <tr>
+        <th>Telephone</th>
+        <td>{{inout.usr.telephone}}</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>{{inout.usr.email}}</td>
+      </tr>
+      <tr>
+        <th>Endereço</th>
+        <td>{{inout.usr.address}}</td>
+      </tr>
+      <tr>
+        <th>Placa</th>
+        <td>{{inout.usr.plate}}</td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <mat-divider></mat-divider>
+
+
+  <div class="all">
+    <div></div>
+    <button mat-raised-button color="primary" [routerLink]="['/inout/update/', {id: inout.id, enter: inout.enter,out: inout.out, usrId: inout.usr.id, usrName: inout.usr.name, usrSurname: inout.usr.surname, usrTelephone: inout.usr.telephone, usrEmail: inout.usr.email, usrAddress: inout.usr.address, usrPlate: inout.usr.plate}]">Modificar</button>
+    <button mat-raised-button color="warn" (click)="openDialog('0ms', '0ms', inout)">Apagar</button><!--(click)="openDialog('0ms', '0ms', element)"-->
+  </div>
+</mat-card>

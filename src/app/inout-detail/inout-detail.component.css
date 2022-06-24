@@ -1,0 +1,48 @@
+th, td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+.content {
+
+    min-height: 200px;
+    border-radius: 10px;
+    margin-top: 16px;
+    margin-left: 32px;
+    margin-right: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+ max-width: 15%;
+ max-height: 15%;
+ vertical-align: bottom;
+}
+
+
+.all {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   vertical-align: bottom;
+}
+
+.yellow {
+  color: yellow;
+}
+
+button {
+  margin-top:15px;
+  margin-right: 8px;
+  vertical-align: bottom;
+}
+
+
+
+.spacer {
+  flex: 100px;
+}
+

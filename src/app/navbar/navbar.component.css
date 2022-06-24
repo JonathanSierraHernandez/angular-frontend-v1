@@ -1,0 +1,13 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+a{
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+button:focus{
+  text-decoration: none;
+  border: 0px solid;
+}
